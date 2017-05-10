@@ -85,3 +85,72 @@ body, html {
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+
+.result {
+  background-color: #FFFFFF;
+  width: 80%;
+  height: 115px;
+  margin: 60px auto 0px auto;
+  font-size: 44px;
+  color: #CDCDCD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 60%;
+  margin: 60px auto 0px auto;
+}
+
+
+label {
+  font-size: 36px;
+  color: #6B6B6B;
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CDCDCD;
+  font-size: 36px;
+  position: relative;
+  left: 23%;
+  top: 8px;
+}
+
+.discharge-times {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.time-and-temp-input {
+  width: 100px;
+  height: 100px;
+}
+
+.time-colons {
+  font-size: 50px;
+  color: #6B6B6B;
+}
+
+.single-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.standard-temp-dropdown {
+  width: 218px;
+  height: 100px;
+  background-color: #FFFFFF;
+}
+
+.current-and-cells-input {
+  width: 140px;
+  height: 100px;
+}

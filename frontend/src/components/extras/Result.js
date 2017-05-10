@@ -1,5 +1,7 @@
 import React from 'react';
 
 const Result = () => {
-  return <div className="result">Result</div>;
+  return <div className="result">Results</div>;
 }
+
+export default Result;

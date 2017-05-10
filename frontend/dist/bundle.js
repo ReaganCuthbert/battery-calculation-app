@@ -12129,19 +12129,24 @@ var _Float = __webpack_require__(268);
 
 var _Float2 = _interopRequireDefault(_Float);
 
+var _Result = __webpack_require__(269);
+
+var _Result2 = _interopRequireDefault(_Result);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//imported components
 var Body = function Body() {
   return _react2.default.createElement(
     'div',
     { className: 'body' },
+    _react2.default.createElement(_Result2.default, null),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/time-adjust', component: _TimeAdjust2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/load', component: _Load2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/float', component: _Float2.default })
   );
 };
 
-//imported components
 exports.default = Body;
 
 /***/ }),
@@ -12311,7 +12316,53 @@ var Load = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "load" },
-        "Load"
+        _react2.default.createElement(
+          "form",
+          null,
+          _react2.default.createElement(
+            "label",
+            null,
+            "Standard Temperature"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement(
+              "select",
+              { className: "standard-temp-dropdown" },
+              _react2.default.createElement(
+                "option",
+                null,
+                "77\xB0F"
+              ),
+              _react2.default.createElement(
+                "option",
+                null,
+                "68\xB0F"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Published Discharge Current"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "current-and-cells-input", type: "text", placeholder: "Amps" })
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Temperature"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "\xB0F" })
+          )
+        )
       );
     }
   }]);
@@ -12361,7 +12412,64 @@ var TimeAdjust = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "time-adjust" },
-        "Time Adjust"
+        _react2.default.createElement(
+          "form",
+          null,
+          _react2.default.createElement(
+            "label",
+            null,
+            "Actual Discharge Time"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "discharge-times" },
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Hrs" }),
+            _react2.default.createElement(
+              "p",
+              { className: "time-colons" },
+              ":"
+            ),
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Min" }),
+            _react2.default.createElement(
+              "p",
+              { className: "time-colons" },
+              ":"
+            ),
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Sec" })
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Rated Discharge Time"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "discharge-times" },
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Hrs" }),
+            _react2.default.createElement(
+              "p",
+              { className: "time-colons" },
+              ":"
+            ),
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Min" }),
+            _react2.default.createElement(
+              "p",
+              { className: "time-colons" },
+              ":"
+            ),
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "Sec" })
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Temperature"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "\xB0F" })
+          )
+        )
       );
     }
   }]);
@@ -27915,7 +28023,40 @@ var Float = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "float" },
-        "Float"
+        _react2.default.createElement(
+          "form",
+          null,
+          _react2.default.createElement(
+            "label",
+            null,
+            "Recommended Cell Voltage"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "current-and-cells-input", type: "text", placeholder: "Volts" })
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Number of Cells"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "current-and-cells-input", type: "text", placeholder: "Cells" })
+          ),
+          _react2.default.createElement(
+            "label",
+            null,
+            "Average Temperature"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "single-inputs" },
+            _react2.default.createElement("input", { className: "time-and-temp-input", type: "text", placeholder: "\xB0F" })
+          )
+        )
       );
     }
   }]);
@@ -27924,6 +28065,33 @@ var Float = function (_Component) {
 }(_react.Component);
 
 exports.default = Float;
+
+/***/ }),
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Result = function Result() {
+  return _react2.default.createElement(
+    "div",
+    { className: "result" },
+    "Results"
+  );
+};
+
+exports.default = Result;
 
 /***/ })
 /******/ ]);
