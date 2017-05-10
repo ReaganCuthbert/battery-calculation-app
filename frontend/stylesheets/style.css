@@ -1,14 +1,30 @@
-body {
+body, html {
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
+#react-container {
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+/*Header*/
 .header {
   background-color: #D22E33;
   color: #FFFFFF;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-flex: 0 1 100px;
+  flex: 0 1 100px;
 }
 
 .calculation-name {
@@ -29,12 +45,15 @@ body {
   margin-right: 24px;
 }
 
+/*Navbar*/
 .navbar {
     background-color: #D22E33;
-    height: 120px;
     width: 100%;
     display: flex;
+    -webkit-flex: 0 1 120px;
+    flex: 0 1 120px;
 }
+
 
 .nav-btn {
   text-decoration: none;
@@ -47,12 +66,22 @@ body {
   align-items: center;
 }
 
+.selectedLink {
+  background-color: #AB2529;
+}
 
-.clock-symbol {
+.symbol {
   width: 90px;
   height: 90px;
 }
 
 .nav-text {
   font-size: 24px;
+}
+
+/*Body*/
+.body {
+  background-color: #DEE5DE;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
 }

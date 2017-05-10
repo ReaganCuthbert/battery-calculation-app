@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 //imported components
 import Header from './Header';
 import Navbar from './Navbar';
+import Body from './Body';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { calculation: "Time Adjustment Method" };
+    this.state = { calculation: "Welcome" };
 
     this.changeCalculation = this.changeCalculation.bind(this);
   }
@@ -19,8 +20,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <Header calculationName={this.state.calculation} />
+      <div className="container">
+        <Header />
+        <Body />
         <Navbar />
       </div>
     );
