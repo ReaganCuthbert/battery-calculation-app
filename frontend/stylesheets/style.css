@@ -98,6 +98,11 @@ body, html {
   align-items: center;
 }
 
+.answer {
+  font-size: 60px;
+  color: #6B6B6B;
+}
+
 form {
   width: 60%;
   margin: 60px auto 0px auto;

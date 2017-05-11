@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { inputCheck } from '../extras/inputCheck';
 
 //Imported Components
 import Result from '../extras/Result';
@@ -7,57 +8,23 @@ export default class TimeAdjust extends Component {
   constructor(props) {
     super(props);
 
+    this.state = { result: '' };
+
     this.inputChange = this.inputChange.bind(this);
-    this.calculate = this.calculate.bind(this);
   }
 
   inputChange(e) {
-    const references = Object.keys(this.refs);
 
-    for(let i = 0; i < references.length; i++) {
-      let inputBox = this.refs[references[i]], nextInput = this.refs[references[i + 1]];
-
-      //runs if correct inputBox.
-      if(inputBox === e.target) {
-
-        //removes inputted number if it's greater than expected length.
-        if(inputBox.value.length > inputBox.maxLength) {
-          inputBox.value = inputBox.value.substring(0, inputBox.value.length -1);
-        }
-
-        //runs if Input Box's length is the same as its requested maxlength.
-        if(inputBox.value.length === inputBox.maxLength) {
-
-          //runs if an input box comes after currently focused input box.
-          if(nextInput) {
-            nextInput.focus();
-            break;
-          }
-
-          this.calculate();
-          break;
-        }
-      }
-    }
+    inputCheck.call(this, e);
   }
 
-  calculate() {
-    const references = Object.keys(this.refs);
-
-    //checks to see which input boxes have values
-    const refsWithValues = references.filter(ref => this.refs[ref].value);
-
-    if(references.length === refsWithValues.length) console.log("let's calculate");
-
-    else console.log('all input boxes must have values');
-  }
 
   render() {
     return (
       <div className="time-adjust">
 
         {/*Results Display Here*/}
-        <Result />
+        <Result result={this.state.result} />
 
         <form>
           {/*Actual Discharge Time*/}

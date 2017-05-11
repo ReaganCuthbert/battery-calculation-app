@@ -4,12 +4,17 @@ import React, { Component } from 'react';
 import Result from '../extras/Result';
 
 export default class Load extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { result: '' };
+  }
   render() {
     return (
       <div className="load">
 
         {/*Results Display Here*/}
-        <Result />
+        <Result result={this.state.result} />
 
         <form>
           {/*Standard Temperature*/}
