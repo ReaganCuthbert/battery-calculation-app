@@ -18,13 +18,13 @@ export default class Load extends Component {
           {/*Published Discharge Current*/}
           <label>Published Discharge Current</label>
           <div className="single-inputs">
-            <input className="current-and-cells-input" type="text" placeholder="Amps" />
+            <input className="current-and-cells-input" type="number" placeholder="Amps" maxlength="3" />
           </div>
 
           {/*Temperature*/}
           <label>Temperature</label>
           <div className="single-inputs">
-            <input className="time-and-temp-input" type="text" placeholder="°F" />
+            <input className="time-and-temp-input" type="number" placeholder="°F" maxlength="3" />
           </div>
         </form>
       </div>
