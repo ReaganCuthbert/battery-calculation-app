@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+//Imported Components
+import Result from '../extras/Result';
+
 export default class TimeAdjust extends Component {
   constructor(props) {
     super(props);
@@ -52,8 +55,11 @@ export default class TimeAdjust extends Component {
   render() {
     return (
       <div className="time-adjust">
-        <form>
 
+        {/*Results Display Here*/}
+        <Result />
+
+        <form>
           {/*Actual Discharge Time*/}
           <label>Actual Discharge Time</label>
           <div className="discharge-times">

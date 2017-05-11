@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
+//Imported Components
+import Result from '../extras/Result';
+
 export default class Load extends Component {
   render() {
     return (
       <div className="load">
-        <form>
 
+        {/*Results Display Here*/}
+        <Result />
+
+        <form>
           {/*Standard Temperature*/}
           <label>Standard Temperature</label>
           <div className="single-inputs">

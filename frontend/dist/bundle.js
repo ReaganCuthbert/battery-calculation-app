@@ -7525,16 +7525,45 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.changeHeading = changeHeading;
+exports.getTimeAdjust = getTimeAdjust;
+exports.getLoad = getLoad;
+exports.getFloat = getFloat;
 
 //actions
 var CHANGE_CALCULATOR_HEADING = exports.CHANGE_CALCULATOR_HEADING = 'CHANGE_CALCULATOR_HEADING';
+var GET_TIME_ADJUST_RESULT = exports.GET_TIME_ADJUST_RESULT = 'GET_TIME_ADJUST_RESULT';
+var GET_LOAD_RESULT = exports.GET_LOAD_RESULT = 'GET_LOAD_RESULT';
+var GET_FLOAT_RESULT = exports.GET_FLOAT_RESULT = 'GET_FLOAT_RESULT';
 
 //action creator for app heading's title.
 function changeHeading(heading) {
-
   return {
     type: CHANGE_CALCULATOR_HEADING,
     heading: heading
+  };
+}
+
+//Time-Adjust result to display.
+function getTimeAdjust(result) {
+  return {
+    type: GET_TIME_ADJUST_RESULT,
+    result: result
+  };
+}
+
+//Load result to display.
+function getLoad(result) {
+  return {
+    type: GET_LOAD_RESULT,
+    result: result
+  };
+}
+
+//Float result to display.
+function getFloat(result) {
+  return {
+    type: GET_FLOAT_RESULT,
+    result: result
   };
 }
 
@@ -12180,24 +12209,19 @@ var _Float = __webpack_require__(116);
 
 var _Float2 = _interopRequireDefault(_Float);
 
-var _Result = __webpack_require__(119);
-
-var _Result2 = _interopRequireDefault(_Result);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//imported components
 var Body = function Body() {
   return _react2.default.createElement(
     'div',
     { className: 'body' },
-    _react2.default.createElement(_Result2.default, null),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/time-adjust', component: _TimeAdjust2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/load', component: _Load2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/float', component: _Float2.default })
   );
 };
 
+//imported components
 exports.default = Body;
 
 /***/ }),
@@ -12344,6 +12368,10 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Result = __webpack_require__(119);
+
+var _Result2 = _interopRequireDefault(_Result);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12351,6 +12379,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//Imported Components
+
 
 var Float = function (_Component) {
   _inherits(Float, _Component);
@@ -12362,43 +12393,44 @@ var Float = function (_Component) {
   }
 
   _createClass(Float, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "float" },
+        'div',
+        { className: 'float' },
+        _react2.default.createElement(_Result2.default, null),
         _react2.default.createElement(
-          "form",
+          'form',
           null,
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Recommended Cell Voltage"
+            'Recommended Cell Voltage'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
-            _react2.default.createElement("input", { className: "current-and-cells-input", type: "number", placeholder: "Volts", maxlength: "3" })
+            'div',
+            { className: 'single-inputs' },
+            _react2.default.createElement('input', { className: 'current-and-cells-input', type: 'number', placeholder: 'Volts', maxlength: '3' })
           ),
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Number of Cells"
+            'Number of Cells'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
-            _react2.default.createElement("input", { className: "current-and-cells-input", type: "number", placeholder: "Cells", maxlength: "3" })
+            'div',
+            { className: 'single-inputs' },
+            _react2.default.createElement('input', { className: 'current-and-cells-input', type: 'number', placeholder: 'Cells', maxlength: '3' })
           ),
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Average Temperature"
+            'Average Temperature'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
-            _react2.default.createElement("input", { className: "time-and-temp-input", type: "number", placeholder: "\xB0F", maxlength: "3" })
+            'div',
+            { className: 'single-inputs' },
+            _react2.default.createElement('input', { className: 'time-and-temp-input', type: 'number', placeholder: '\xB0F', maxlength: '3' })
           )
         )
       );
@@ -12427,6 +12459,10 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Result = __webpack_require__(119);
+
+var _Result2 = _interopRequireDefault(_Result);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12434,6 +12470,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//Imported Components
+
 
 var Load = function (_Component) {
   _inherits(Load, _Component);
@@ -12445,56 +12484,57 @@ var Load = function (_Component) {
   }
 
   _createClass(Load, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "load" },
+        'div',
+        { className: 'load' },
+        _react2.default.createElement(_Result2.default, null),
         _react2.default.createElement(
-          "form",
+          'form',
           null,
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Standard Temperature"
+            'Standard Temperature'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
+            'div',
+            { className: 'single-inputs' },
             _react2.default.createElement(
-              "select",
-              { className: "standard-temp-dropdown" },
+              'select',
+              { className: 'standard-temp-dropdown' },
               _react2.default.createElement(
-                "option",
+                'option',
                 null,
-                "77\xB0F"
+                '77\xB0F'
               ),
               _react2.default.createElement(
-                "option",
+                'option',
                 null,
-                "68\xB0F"
+                '68\xB0F'
               )
             )
           ),
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Published Discharge Current"
+            'Published Discharge Current'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
-            _react2.default.createElement("input", { className: "current-and-cells-input", type: "number", placeholder: "Amps", maxlength: "3" })
+            'div',
+            { className: 'single-inputs' },
+            _react2.default.createElement('input', { className: 'current-and-cells-input', type: 'number', placeholder: 'Amps', maxlength: '3' })
           ),
           _react2.default.createElement(
-            "label",
+            'label',
             null,
-            "Temperature"
+            'Temperature'
           ),
           _react2.default.createElement(
-            "div",
-            { className: "single-inputs" },
-            _react2.default.createElement("input", { className: "time-and-temp-input", type: "number", placeholder: "\xB0F", maxlength: "3" })
+            'div',
+            { className: 'single-inputs' },
+            _react2.default.createElement('input', { className: 'time-and-temp-input', type: 'number', placeholder: '\xB0F', maxlength: '3' })
           )
         )
       );
@@ -12523,6 +12563,10 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Result = __webpack_require__(119);
+
+var _Result2 = _interopRequireDefault(_Result);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12530,6 +12574,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//Imported Components
+
 
 var TimeAdjust = function (_Component) {
   _inherits(TimeAdjust, _Component);
@@ -12596,6 +12643,7 @@ var TimeAdjust = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'time-adjust' },
+        _react2.default.createElement(_Result2.default, null),
         _react2.default.createElement(
           'form',
           null,

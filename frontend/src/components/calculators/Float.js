@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
+//Imported Components
+import Result from '../extras/Result';
+
 export default class Float extends Component {
   render() {
     return (
       <div className="float">
-        <form>
 
+        {/*Results Display Here*/}
+        <Result />
+        
+        <form>
           {/*Published Discharge Current*/}
           <label>Recommended Cell Voltage</label>
           <div className="single-inputs">
