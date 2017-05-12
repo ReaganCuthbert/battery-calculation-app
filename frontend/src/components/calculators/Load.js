@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeHeading } from '../../actions';
 import { inputCheck } from '../extras/inputCheck';
+import { inputRecalculate } from '../extras/inputRecalculate';
 
 //Imported Components
 import Result from '../extras/Result';
@@ -14,6 +15,7 @@ class Load extends Component {
     this.state = { result: '' };
 
     this.inputChange = this.inputChange.bind(this);
+    this.leaveInput = this.leaveInput.bind(this);
   }
 
   //adds "Load Correction" to heading.
@@ -24,6 +26,10 @@ class Load extends Component {
 
   inputChange(e) {
     inputCheck.call(this, e);
+  }
+
+  leaveInput() {
+    inputRecalculate.call(this);
   }
 
   render() {
@@ -46,13 +52,13 @@ class Load extends Component {
           {/*Published Discharge Current*/}
           <label>Published Discharge Current</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} className="current-and-cells-input" ref="current" type="number" placeholder="Amps" maxLength="3" />
+            <input onChange={this.inputChange} onBlur={this.leaveInput} className="current-and-cells-input" ref="current" type="number" placeholder="Amps" maxLength="3" />
           </div>
 
           {/*Temperature*/}
           <label>Temperature</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} className="time-and-temp-input" ref="temp" type="number" placeholder="°F" maxLength="3" />
+            <input onChange={this.inputChange} onBlur={this.leaveInput} className="time-and-temp-input" ref="temp" type="number" placeholder="°F" maxLength="3" />
           </div>
         </form>
       </div>
