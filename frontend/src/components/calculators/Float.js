@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { changeHeading } from '../../actions';
 import { inputCheck } from '../extras/inputCheck';
 
 //Imported Components
 import Result from '../extras/Result';
 
-export default class Float extends Component {
+class Float extends Component {
   constructor(props) {
     super(props);
 
     this.state = { result: '' };
 
     this.inputChange = this.inputChange.bind(this);
-    this.calculate = this.calculate.bind(this);
+  }
+
+  //adds "Float Voltage" to heading.
+  componentWillMount() {
+    this.props.changeHeading("Float Voltage");
   }
 
   inputChange(e) {
@@ -19,9 +26,6 @@ export default class Float extends Component {
     inputCheck.call(this, e);
   }
 
-  calculate() {
-    console.log('it works!');
-  }
 
   render() {
     return (
@@ -34,7 +38,7 @@ export default class Float extends Component {
           {/*Published Discharge Current*/}
           <label>Recommended Cell Voltage</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} className="current-and-cells-input" ref="recVolts" type="number" placeholder="Volts" maxLength="3" />
+            <input onChange={this.inputChange} className="current-and-cells-input" ref="recVolts" type="number" placeholder="Volts" maxLength="4" />
           </div>
 
           {/*Published Discharge Current*/}
@@ -53,3 +57,9 @@ export default class Float extends Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ changeHeading }, dispatch);
+}
+
+export default connect(null,mapDispatchToProps)(Float);

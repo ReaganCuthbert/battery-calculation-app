@@ -8,7 +8,7 @@ const Header = ({ heading }) => {
   return (
     <div className="header">
       <h1 className="calculation-name">{headingTitle}</h1>
-      <div className="calculation-question">?</div>
+      {/*<div className="calculation-question">?</div>*/}
     </div>
   );
 }

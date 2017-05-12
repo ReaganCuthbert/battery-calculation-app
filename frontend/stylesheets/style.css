@@ -29,7 +29,7 @@ body, html {
 
 .calculation-name {
   font-size: 44px;
-  padding-right: 24px;
+  /*padding-right: 24px;*/
 }
 
 .calculation-question {
@@ -121,9 +121,14 @@ label {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #CDCDCD;
   font-size: 36px;
-  position: relative;
-  left: 23%;
-  top: 8px;
+  text-align: center;
+
+}
+
+input[type="number"] {
+    font-size:44px;
+    color: #6B6B6B;
+    text-align: center;
 }
 
 .discharge-times {
@@ -150,12 +155,65 @@ label {
 }
 
 .standard-temp-dropdown {
-  width: 218px;
+  background: url("../svgs/dropdown-arrow.svg") no-repeat 96%;
+  background-size: 40px 40px;
   height: 100px;
+  width: 218px;
   background-color: #FFFFFF;
+  margin: 0px auto 60px auto;
 }
+
+.standard-temp-dropdown select {
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-size: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 
 .current-and-cells-input {
   width: 140px;
   height: 100px;
+}
+
+/*Welcome Page*/
+.welcome-message {
+  width: 80%;
+  margin: 20% auto 0px auto;
+  text-align: center;
+  font-size: 100px;
+}
+
+.name {
+  font-size: 130px;
+}
+
+.click-calculator {
+  width: 80%;
+  margin: 20% auto 0px auto;
+  font-size: 65px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-60px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.moving-arrow {
+  height: 328px;
+  width: 435px;
+  display: block;
+  margin: 20% auto 0px auto;
+  animation: float 1.5s ease-in-out infinite;
 }

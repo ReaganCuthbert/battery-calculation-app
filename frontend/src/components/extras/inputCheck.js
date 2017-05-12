@@ -1,4 +1,4 @@
-import { calculate } from './calculate';
+import { inputRecalculate } from './inputRecalculate';
 
 export function inputCheck(event) {
   const references = Object.keys(this.refs);
@@ -30,7 +30,7 @@ export function inputCheck(event) {
         }
 
         //if last input box, calculate.
-        calculate.call(this);
+        inputRecalculate.call(this);
         break;
       }
     }
