@@ -1,0 +1,219 @@
+body, html {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+#react-container {
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+/*Header*/
+.header {
+  background-color: #D22E33;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-flex: 0 1 100px;
+  flex: 0 1 100px;
+}
+
+.calculation-name {
+  font-size: 44px;
+  /*padding-right: 24px;*/
+}
+
+.calculation-question {
+  background-color: #FFFFFF;
+  color: #6B6B6B;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+}
+
+/*Navbar*/
+.navbar {
+    background-color: #D22E33;
+    width: 100%;
+    display: flex;
+    -webkit-flex: 0 1 120px;
+    flex: 0 1 120px;
+}
+
+
+.nav-btn {
+  text-decoration: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectedLink {
+  background-color: #AB2529;
+}
+
+.symbol {
+  width: 90px;
+  height: 90px;
+}
+
+.nav-text {
+  font-size: 24px;
+}
+
+/*Body*/
+.body {
+  background-color: #DEE5DE;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.result {
+  background-color: #FFFFFF;
+  width: 80%;
+  height: 115px;
+  margin: 60px auto 0px auto;
+  font-size: 44px;
+  color: #CDCDCD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer {
+  font-size: 60px;
+  color: #6B6B6B;
+}
+
+form {
+  width: 60%;
+  margin: 60px auto 0px auto;
+}
+
+
+label {
+  font-size: 36px;
+  color: #6B6B6B;
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CDCDCD;
+  font-size: 36px;
+  text-align: center;
+
+}
+
+input[type="number"] {
+    font-size:44px;
+    color: #6B6B6B;
+    text-align: center;
+}
+
+.discharge-times {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.time-and-temp-input {
+  width: 100px;
+  height: 100px;
+}
+
+.time-colons {
+  font-size: 50px;
+  color: #6B6B6B;
+}
+
+.single-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.standard-temp-dropdown {
+  background: url("../svgs/dropdown-arrow.svg") no-repeat 96%;
+  background-size: 40px 40px;
+  height: 100px;
+  width: 218px;
+  background-color: #FFFFFF;
+  margin: 0px auto 60px auto;
+}
+
+.standard-temp-dropdown select {
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-size: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+.current-and-cells-input {
+  width: 140px;
+  height: 100px;
+}
+
+/*Welcome Page*/
+.welcome-message {
+  width: 80%;
+  margin: 20% auto 0px auto;
+  text-align: center;
+  font-size: 100px;
+}
+
+.name {
+  font-size: 130px;
+}
+
+.click-calculator {
+  width: 80%;
+  margin: 20% auto 0px auto;
+  font-size: 65px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-60px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.moving-arrow {
+  height: 328px;
+  width: 435px;
+  display: block;
+  margin: 20% auto 0px auto;
+  animation: float 1.5s ease-in-out infinite;
+}
