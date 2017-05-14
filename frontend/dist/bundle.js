@@ -33077,7 +33077,7 @@ function calculate() {
   if (references[0] === "recVolts") {
     var _result = (0, _dcBatteryTesting.floatVoltage)(parsedVal(0), parsedVal(1), parsedVal(2));
 
-    this.setState({ result: _result });
+    this.setState({ result: _result + ' VDC' });
   }
 
   //calculates if load correction

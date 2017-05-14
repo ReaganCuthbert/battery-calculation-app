@@ -28,7 +28,7 @@ export function calculate() {
         parsedVal(2)
       );
 
-      this.setState({ result });
+      this.setState({ result: result + ' VDC' });
     }
 
     //calculates if load correction
@@ -41,5 +41,5 @@ export function calculate() {
 
       this.setState({ result: result + ' Amps DC' });
     }
-    
+
 }
