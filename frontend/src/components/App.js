@@ -16,8 +16,14 @@ export default class App extends Component {
 
     //if screen orientation is landscape, return modal.
     window.addEventListener("orientationchange", () => {
-      if(screen.width > screen.height) this.setState({ modalToggle: true });
-      else this.setState({ modalToggle: false });
+      if(screen.width > screen.height) {
+        this.setState({ modalToggle: true });
+        console.log("landscape");
+      }
+      else {
+        this.setState({ modalToggle: false });
+        console.log("portrait");
+      }
     })
 
   }

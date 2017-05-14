@@ -11992,7 +11992,13 @@ var App = function (_Component) {
 
     //if screen orientation is landscape, return modal.
     window.addEventListener("orientationchange", function () {
-      if (screen.width > screen.height) _this.setState({ modalToggle: true });else _this.setState({ modalToggle: false });
+      if (screen.width > screen.height) {
+        _this.setState({ modalToggle: true });
+        console.log("landscape");
+      } else {
+        _this.setState({ modalToggle: false });
+        console.log("portrait");
+      }
     });
 
     return _this;
