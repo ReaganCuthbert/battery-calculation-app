@@ -11997,7 +11997,7 @@ var App = function (_Component) {
     _this.state = { modalToggle: false };
 
     //if screen orientation is landscape, return modal.
-    window.addEventListener("resize", function () {
+    window.addEventListener("orientationchange", function () {
       if (screen.width > screen.height) _this.setState({ modalToggle: true });else _this.setState({ modalToggle: false });
     });
 
