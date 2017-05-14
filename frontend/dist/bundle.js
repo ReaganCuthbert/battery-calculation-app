@@ -11998,7 +11998,7 @@ var App = function (_Component) {
 
     //if screen orientation is landscape, return modal.
     window.addEventListener("resize", function () {
-      if (screen.orientation.type === "landscape-primary") _this.setState({ modalToggle: true });else _this.setState({ modalToggle: false });
+      if (screen.width > screen.height) _this.setState({ modalToggle: true });else _this.setState({ modalToggle: false });
     });
 
     return _this;
@@ -12010,7 +12010,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      if (screen.orientation.type === "landscape-primary") this.setState({ modalToggle: true });
+      if (screen.width > screen.height) this.setState({ modalToggle: true });
     }
   }, {
     key: 'render',

@@ -21,7 +21,7 @@ export default class App extends Component {
 
     //if screen orientation is landscape, return modal.
     window.addEventListener("resize", () => {
-      if(screen.orientation.type === "landscape-primary") this.setState({ modalToggle: true });
+      if(screen.width > screen.height) this.setState({ modalToggle: true });
       else this.setState({ modalToggle: false });
     });
 
@@ -29,7 +29,7 @@ export default class App extends Component {
 
   //if screen orientation is landscape, return modal.
   componentWillMount() {
-    if(screen.orientation.type === "landscape-primary")
+    if(screen.width > screen.height)
       this.setState({ modalToggle: true });
   }
 
