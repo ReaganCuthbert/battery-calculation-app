@@ -6,30 +6,26 @@ import Navbar from './Navbar';
 import Body from './Body';
 import Modal from 'react-modal';
 
-
-
 export default class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = { modalToggle: false };
 
+
     //if screen orientation is landscape, return modal.
     window.addEventListener("orientationchange", () => {
-      if(screen.width > screen.height) {
-        this.setState({ modalToggle: true });
-        console.log("landscape");
-      }
-      else {
-        this.setState({ modalToggle: false });
-        console.log("portrait");
-      }
-    })
+      if(screen.width > screen.height) this.setState({ modalToggle: true });
+
+      else this.setState({ modalToggle: false });  
+    });
 
   }
 
+
   //if screen orientation is landscape, return modal.
   componentWillMount() {
+
     if(screen.width > screen.height)
       this.setState({ modalToggle: true });
   }
