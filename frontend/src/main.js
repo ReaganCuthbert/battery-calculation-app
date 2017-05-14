@@ -9,9 +9,12 @@ import reducers from './reducers/mainReducer';
 
 //Imported Components
 import App from './components/App';
+import Modal from 'react-modal';
 
 //Redux Store Creation
 const store = createStore(reducers);
+
+
 
 render(
   <Provider store={store}>
