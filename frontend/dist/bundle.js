@@ -11980,12 +11980,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //imported components
 
 
-//modalStyles
-var modalStyles = {
-  width: '100%',
-  height: '100%'
-};
-
 var App = function (_Component) {
   _inherits(App, _Component);
 
@@ -12023,11 +12017,16 @@ var App = function (_Component) {
         _react2.default.createElement(_Navbar2.default, null),
         _react2.default.createElement(
           _reactModal2.default,
-          { isOpen: this.state.modalToggle, style: modalStyles, contentLabel: 'Orientation Check' },
+          { isOpen: this.state.modalToggle, className: 'modal', contentLabel: 'Orientation Check' },
           _react2.default.createElement(
-            'h1',
-            null,
-            'Hello World!'
+            'p',
+            { className: 'orientation-warning' },
+            'BatteryApp is a mobile web app.'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'orientation-warning orientation-command' },
+            'Please switch over to a phone or tablet in portrait view.'
           )
         )
       );

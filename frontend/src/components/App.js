@@ -6,11 +6,6 @@ import Navbar from './Navbar';
 import Body from './Body';
 import Modal from 'react-modal';
 
-//modalStyles
-const modalStyles = {
-  width: '100%',
-  height: '100%'
-}
 
 
 export default class App extends Component {
@@ -40,8 +35,9 @@ export default class App extends Component {
         <Header />
         <Body />
         <Navbar />
-        <Modal isOpen={this.state.modalToggle} style={modalStyles} contentLabel="Orientation Check">
-          <h1>Hello World!</h1>
+        <Modal isOpen={this.state.modalToggle} className="modal" contentLabel="Orientation Check">
+          <p className="orientation-warning">BatteryApp is a mobile web app.</p>
+          <p className="orientation-warning orientation-command">Please switch over to a phone or tablet in portrait view.</p>
         </Modal>
       </div>
     );
