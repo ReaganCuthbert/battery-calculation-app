@@ -16162,7 +16162,7 @@ var TimeAdjust = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'discharge-times' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'number', placeholder: 'Hrs', maxLength: '2' }),
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'text', placeholder: 'Hrs', maxLength: '2' }),
             _react2.default.createElement(
               'p',
               { className: 'time-colons' },
