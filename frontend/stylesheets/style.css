@@ -51,7 +51,7 @@ body, html {
     width: 100%;
     display: flex;
     -webkit-flex: 0 1 120px;
-    flex: 0 1 120px;
+    flex: 0 1 170px;
 }
 
 
@@ -60,10 +60,10 @@ body, html {
   color: #FFFFFF;
   cursor: pointer;
   width: calc(100% / 3);
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .selectedLink {
@@ -72,12 +72,13 @@ body, html {
 }
 
 .symbol {
-  width: 90px;
-  height: 90px;
+  padding-top: 2%;
+  width: 110px;
+  height: 110px;
 }
 
 .nav-text {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 /*Body*/
@@ -139,8 +140,13 @@ input[type="number"] {
   margin-bottom: 60px;
 }
 
-.time-and-temp-input {
+.time-input {
   width: 100px;
+  height: 100px;
+}
+
+.temp-input {
+  width: 100%;
   height: 100px;
 }
 
@@ -150,6 +156,7 @@ input[type="number"] {
 }
 
 .single-inputs {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
@@ -159,7 +166,7 @@ input[type="number"] {
   background: url("../svgs/dropdown-arrow.svg") no-repeat 96%;
   background-size: 40px 40px;
   height: 100px;
-  width: 218px;
+  width: 100%;
   background-color: #FFFFFF;
   margin: 0px auto 60px auto;
 }
@@ -176,8 +183,10 @@ input[type="number"] {
 }
 
 
+
+
 .current-and-cells-input {
-  width: 140px;
+  width: 100%;
   height: 100px;
 }
 
