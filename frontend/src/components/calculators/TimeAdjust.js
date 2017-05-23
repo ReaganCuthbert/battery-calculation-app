@@ -32,7 +32,7 @@ class TimeAdjust extends Component {
   }
 
   highlightVal(e) {
-    e.target.select();
+    e.target.setSelectionRange(0, 9999);
   }
 
 

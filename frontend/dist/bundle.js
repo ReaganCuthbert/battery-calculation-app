@@ -16142,7 +16142,7 @@ var TimeAdjust = function (_Component) {
   }, {
     key: 'highlightVal',
     value: function highlightVal(e) {
-      e.target.select();
+      e.target.setSelectionRange(0, 9999);
     }
   }, {
     key: 'render',
