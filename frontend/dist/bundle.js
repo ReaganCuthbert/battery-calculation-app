@@ -15861,7 +15861,7 @@ var Float = function (_Component) {
   }, {
     key: 'highlightVal',
     value: function highlightVal(e) {
-      e.target.select();
+      e.target.value = '';
     }
   }, {
     key: 'render',
@@ -15995,7 +15995,7 @@ var Load = function (_Component) {
   }, {
     key: 'highlightVal',
     value: function highlightVal(e) {
-      e.target.select();
+      e.target.value = '';
     }
   }, {
     key: 'render',
@@ -16142,7 +16142,7 @@ var TimeAdjust = function (_Component) {
   }, {
     key: 'highlightVal',
     value: function highlightVal(e) {
-      e.target.setSelectionRange(0, 9999);
+      e.target.value = '';
     }
   }, {
     key: 'render',
@@ -16162,7 +16162,7 @@ var TimeAdjust = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'discharge-times' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'text', placeholder: 'Hrs', maxLength: '2' }),
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'number', placeholder: 'Hrs', maxLength: '2' }),
             _react2.default.createElement(
               'p',
               { className: 'time-colons' },

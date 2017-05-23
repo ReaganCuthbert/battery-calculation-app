@@ -32,7 +32,7 @@ class Float extends Component {
   }
 
   highlightVal(e) {
-    e.target.select();
+    e.target.value = '';
   }
 
   render() {
