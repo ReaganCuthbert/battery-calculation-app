@@ -16227,19 +16227,22 @@ function calculate() {
 
   //parses input values to numbers.
   function parsedVal(val) {
-    return parseInt(input[references[val]].value);
+    return parseFloat(input[references[val]].value);
   }
 
   //calculates if time-adjust method.
-  if (references[0] === "adtHour") {
-    var result = (0, _dcBatteryTesting.timeAdjust)([parsedVal(0), parsedVal(1), parsedVal(2)], [parsedVal(3), parsedVal(4), parsedVal(5)], parsedVal(6));
+  if (references[0] === "rdtHour") {
+    var result = (0, _dcBatteryTesting.timeAdjust)([parsedVal(3), parsedVal(4), parsedVal(5)], [parsedVal(0), parsedVal(1), parsedVal(2)], parsedVal(6));
+
+    console.log(result);
 
     this.setState({ result: result + '%' });
   }
 
   //calculates if float voltage.
   if (references[0] === "recVolts") {
-    var _result = (0, _dcBatteryTesting.floatVoltage)(parsedVal(0), parsedVal(1), parsedVal(2));
+    console.log(parsedVal(0), parsedVal(2), parsedVal(1));
+    var _result = (0, _dcBatteryTesting.floatVoltage)(parsedVal(0), parsedVal(2), parsedVal(1));
 
     this.setState({ result: _result + ' VDC' });
   }
