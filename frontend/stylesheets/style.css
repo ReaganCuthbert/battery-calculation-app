@@ -29,7 +29,6 @@ body, html {
 
 .calculation-name {
   font-size: 44px;
-  /*padding-right: 24px;*/
 }
 
 .calculation-question {
@@ -69,7 +68,7 @@ body, html {
 
 .selectedLink {
   background-color: #AB2529;
-  height: 160px;
+  height: 170px;
 }
 
 .symbol {
