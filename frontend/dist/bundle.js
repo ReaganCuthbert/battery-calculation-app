@@ -5170,8 +5170,8 @@ function inputCheck(event) {
       //runs if Input Box's length is the same as its requested maxlength.
       if (inputBox.value.length === inputBox.maxLength) {
 
-        //if first number is zero, it is removed.
-        if (inputBox.value.charAt(0) === '0') {
+        //if first number is zero, it is removed. This does not occur on time input boxes.
+        if (inputBox.value.charAt(0) === '0' && inputBox.className !== 'time-input') {
           inputBox.value = inputBox.value.substring(1, inputBox.value.length);
         }
 
@@ -15859,6 +15859,11 @@ var Float = function (_Component) {
       _inputRecalculate.inputRecalculate.call(this);
     }
   }, {
+    key: 'highlightVal',
+    value: function highlightVal(e) {
+      e.target.select();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -15876,7 +15881,7 @@ var Float = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'single-inputs' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'recVolts', type: 'number', placeholder: '2.25 Volts', maxLength: '4' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'recVolts', type: 'number', placeholder: '2.25 Volts', maxLength: '4' })
           ),
           _react2.default.createElement(
             'label',
@@ -15886,7 +15891,7 @@ var Float = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'single-inputs' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'cellNum', type: 'number', placeholder: '60 Cells', maxLength: '3' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'cellNum', type: 'number', placeholder: '60 Cells', maxLength: '3' })
           ),
           _react2.default.createElement(
             'label',
@@ -15896,7 +15901,7 @@ var Float = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'single-inputs' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'temp-input', ref: 'temp', type: 'number', placeholder: '71\xB0F', maxLength: '3' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'temp-input', ref: 'temp', type: 'number', placeholder: '71\xB0F', maxLength: '3' })
           )
         )
       );
@@ -15988,6 +15993,11 @@ var Load = function (_Component) {
       _inputRecalculate.inputRecalculate.call(this);
     }
   }, {
+    key: 'highlightVal',
+    value: function highlightVal(e) {
+      e.target.select();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -16028,7 +16038,7 @@ var Load = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'single-inputs' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'current', type: 'number', placeholder: '400 Amps', maxLength: '3' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'current-and-cells-input', ref: 'current', type: 'number', placeholder: '400 Amps', maxLength: '3' })
           ),
           _react2.default.createElement(
             'label',
@@ -16038,7 +16048,7 @@ var Load = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'single-inputs' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'temp-input', ref: 'temp', type: 'number', placeholder: '71\xB0F', maxLength: '3' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'temp-input', ref: 'temp', type: 'number', placeholder: '71\xB0F', maxLength: '3' })
           )
         )
       );
@@ -16130,6 +16140,11 @@ var TimeAdjust = function (_Component) {
       _inputRecalculate.inputRecalculate.call(this);
     }
   }, {
+    key: 'highlightVal',
+    value: function highlightVal(e) {
+      e.target.select();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -16147,19 +16162,19 @@ var TimeAdjust = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'discharge-times' },
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'number', placeholder: 'Hrs', maxLength: '2' }),
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtHour', type: 'number', placeholder: 'Hrs', maxLength: '2' }),
             _react2.default.createElement(
               'p',
               { className: 'time-colons' },
               ':'
             ),
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtMin', type: 'number', placeholder: 'Min', maxLength: '2' }),
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtMin', type: 'number', placeholder: 'Min', maxLength: '2' }),
             _react2.default.createElement(
               'p',
               { className: 'time-colons' },
               ':'
             ),
-            _react2.default.createElement('input', { onChange: this.inputChange, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtSec', type: 'number', placeholder: 'Sec', maxLength: '2' })
+            _react2.default.createElement('input', { onChange: this.inputChange, onFocus: this.highlightVal, onBlur: this.leaveInput, className: 'time-input', ref: 'rdtSec', type: 'number', placeholder: 'Sec', maxLength: '2' })
           ),
           _react2.default.createElement(
             'label',
@@ -16234,14 +16249,11 @@ function calculate() {
   if (references[0] === "rdtHour") {
     var result = (0, _dcBatteryTesting.timeAdjust)([parsedVal(3), parsedVal(4), parsedVal(5)], [parsedVal(0), parsedVal(1), parsedVal(2)], parsedVal(6));
 
-    console.log(result);
-
     this.setState({ result: result + '%' });
   }
 
   //calculates if float voltage.
   if (references[0] === "recVolts") {
-    console.log(parsedVal(0), parsedVal(2), parsedVal(1));
     var _result = (0, _dcBatteryTesting.floatVoltage)(parsedVal(0), parsedVal(2), parsedVal(1));
 
     this.setState({ result: _result + ' VDC' });
@@ -16251,7 +16263,7 @@ function calculate() {
   if (references[0] === "standardTemp") {
     var _result2 = (0, _dcBatteryTesting.loadCorrection)(parsedVal(0), parsedVal(1), parsedVal(2));
 
-    this.setState({ result: _result2 + ' Amps DC' });
+    this.setState({ result: _result2 + ' ADC' });
   }
 }
 

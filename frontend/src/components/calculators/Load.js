@@ -32,6 +32,10 @@ class Load extends Component {
     inputRecalculate.call(this);
   }
 
+  highlightVal(e) {
+    e.target.select();
+  }
+
   render() {
     return (
       <div className="load">
@@ -52,13 +56,13 @@ class Load extends Component {
           {/*Published Discharge Current*/}
           <label>Published Discharge Current</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="current-and-cells-input" ref="current" type="number" placeholder="400 Amps" maxLength="3" />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="current-and-cells-input" ref="current" type="number" placeholder="400 Amps" maxLength="3" />
           </div>
 
           {/*Temperature*/}
           <label>Temperature</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="temp-input" ref="temp" type="number" placeholder="71°F" maxLength="3" />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="temp-input" ref="temp" type="number" placeholder="71°F" maxLength="3" />
           </div>
         </form>
       </div>

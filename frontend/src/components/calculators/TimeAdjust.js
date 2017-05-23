@@ -31,6 +31,10 @@ class TimeAdjust extends Component {
     inputRecalculate.call(this);
   }
 
+  highlightVal(e) {
+    e.target.select();
+  }
+
 
   render() {
     return (
@@ -43,11 +47,11 @@ class TimeAdjust extends Component {
           {/*Rated Discharge Time*/}
           <label>Rated Discharge Time</label>
           <div className="discharge-times">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="time-input" ref="rdtHour" type="number" placeholder="Hrs" maxLength="2"  />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="time-input" ref="rdtHour" type="number" placeholder="Hrs" maxLength="2"  />
             <p className="time-colons">:</p>
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="time-input" ref="rdtMin" type="number" placeholder="Min" maxLength="2"  />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="time-input" ref="rdtMin" type="number" placeholder="Min" maxLength="2"  />
             <p className="time-colons">:</p>
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="time-input" ref="rdtSec" type="number" placeholder="Sec" maxLength="2"  />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="time-input" ref="rdtSec" type="number" placeholder="Sec" maxLength="2"  />
           </div>
 
           {/*Actual Discharge Time*/}

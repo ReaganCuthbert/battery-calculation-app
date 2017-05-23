@@ -17,14 +17,12 @@ export function calculate() {
         [parsedVal(0), parsedVal(1), parsedVal(2)],
         parsedVal(6));
 
-        console.log(result);
 
       this.setState({ result: result + '%' });
     }
 
     //calculates if float voltage.
     if(references[0] === "recVolts") {
-      console.log(parsedVal(0),parsedVal(2),parsedVal(1));
       const result = floatVoltage(
         parsedVal(0),
         parsedVal(2),
@@ -42,7 +40,7 @@ export function calculate() {
         parsedVal(2)
       );
 
-      this.setState({ result: result + ' Amps DC' });
+      this.setState({ result: result + ' ADC' });
     }
 
 }

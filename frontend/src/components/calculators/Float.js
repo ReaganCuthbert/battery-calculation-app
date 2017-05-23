@@ -31,6 +31,10 @@ class Float extends Component {
     inputRecalculate.call(this);
   }
 
+  highlightVal(e) {
+    e.target.select();
+  }
+
   render() {
     return (
       <div className="float">
@@ -42,19 +46,19 @@ class Float extends Component {
           {/*Published Discharge Current*/}
           <label>Recommended Cell Voltage</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="current-and-cells-input" ref="recVolts" type="number" placeholder="2.25 Volts" maxLength="4" />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="current-and-cells-input" ref="recVolts" type="number" placeholder="2.25 Volts" maxLength="4" />
           </div>
 
           {/*Published Discharge Current*/}
           <label>Number of Cells</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="current-and-cells-input" ref="cellNum" type="number" placeholder="60 Cells" maxLength="3" />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="current-and-cells-input" ref="cellNum" type="number" placeholder="60 Cells" maxLength="3" />
           </div>
 
           {/*Temperature*/}
           <label>Average Temperature</label>
           <div className="single-inputs">
-            <input onChange={this.inputChange} onBlur={this.leaveInput} className="temp-input" ref="temp" type="number" placeholder="71°F" maxLength="3" />
+            <input onChange={this.inputChange} onFocus={this.highlightVal} onBlur={this.leaveInput} className="temp-input" ref="temp" type="number" placeholder="71°F" maxLength="3" />
           </div>
         </form>
       </div>

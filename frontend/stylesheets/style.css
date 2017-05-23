@@ -174,8 +174,10 @@ input[type="number"] {
 .standard-temp-dropdown select {
   background: transparent;
   border: none;
+  display: block;
+  margin-left:auto;
   height: 100%;
-  width: 100%;
+  width: 60%;
   font-size: 44px;
   appearance: none;
   -webkit-appearance: none;

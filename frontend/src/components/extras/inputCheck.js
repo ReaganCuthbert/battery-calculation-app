@@ -10,6 +10,8 @@ export function inputCheck(event) {
     //runs if correct inputBox.
     if(inputBox === event.target) {
 
+
+
       //removes inputted number if it's greater than expected length.
       if(inputBox.value.length > inputBox.maxLength) {
         inputBox.value = inputBox.value.substring(0, inputBox.value.length -1);
@@ -18,8 +20,8 @@ export function inputCheck(event) {
       //runs if Input Box's length is the same as its requested maxlength.
       if(inputBox.value.length === inputBox.maxLength) {
 
-        //if first number is zero, it is removed.
-        if(inputBox.value.charAt(0) === '0') {
+        //if first number is zero, it is removed. This does not occur on time input boxes.
+        if(inputBox.value.charAt(0) === '0' && inputBox.className !== 'time-input') {
           inputBox.value = inputBox.value.substring(1, inputBox.value.length);
         }
 
