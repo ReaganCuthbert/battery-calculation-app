@@ -17,7 +17,7 @@ export default class App extends Component {
     window.addEventListener("orientationchange", () => {
       if(screen.width > screen.height) this.setState({ modalToggle: true });
 
-      else this.setState({ modalToggle: false });  
+      else this.setState({ modalToggle: false });
     });
 
   }
@@ -38,7 +38,7 @@ export default class App extends Component {
         <Body />
         <Navbar />
         <Modal isOpen={this.state.modalToggle} className="modal" contentLabel="Orientation Check">
-          <p className="orientation-warning">BatteryApp is a mobile web app.</p>
+          <p className="orientation-warning">DCTesting is a mobile web app.</p>
           <p className="orientation-warning orientation-command">Please switch over to a phone or tablet in portrait view.</p>
         </Modal>
       </div>
