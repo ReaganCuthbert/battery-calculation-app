@@ -15520,7 +15520,7 @@ var App = function (_Component) {
           _react2.default.createElement(
             'p',
             { className: 'orientation-warning' },
-            'BatteryApp is a mobile web app.'
+            'DCTesting is a mobile web app.'
           ),
           _react2.default.createElement(
             'p',
