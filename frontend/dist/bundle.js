@@ -15769,7 +15769,7 @@ var Welcome = function Welcome() {
       _react2.default.createElement(
         "span",
         { className: "name" },
-        "BatteryApp!"
+        "DCTesting!"
       )
     ),
     _react2.default.createElement(
