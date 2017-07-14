@@ -15765,12 +15765,7 @@ var Welcome = function Welcome() {
     _react2.default.createElement(
       "h1",
       { className: "welcome-message" },
-      "Welcome to ",
-      _react2.default.createElement(
-        "span",
-        { className: "name" },
-        "DCTesting!"
-      )
+      "Welcome!"
     ),
     _react2.default.createElement(
       "p",
